@@ -1,6 +1,7 @@
 package com.stefanaleksic.habitrpg.user;
 
 import com.stefanaleksic.habitrpg.user.elements.Reward;
+import com.stefanaleksic.habitrpg.user.elements.Todo;
 
 import java.util.List;
 
@@ -13,6 +14,7 @@ import java.util.List;
 public class User {
     private int id;
     private List<Reward> rewards;
+    private List<Todo> todos;
 
     //TODO: Implement rest of user.
 

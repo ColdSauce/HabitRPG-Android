@@ -3,12 +3,12 @@ package com.stefanaleksic.habitrpg;
 /**
  * Created by Stefan on 5/26/2015.
  * This class provides utility constant values for the project. These constant values range from
- * HRElement values to User values.
+ * Task values to User values.
  * TODO: This is probably a bad way of having constant values. Should probably split it up into different files.
  */
 public final class ConstantValues {
     /**
-     * The type of an HRElement
+     * The type of an Task
      */
     public enum Type {
         //TODO: Add more types
@@ -16,7 +16,7 @@ public final class ConstantValues {
     }
 
     /**
-     * Attribute of an HRElement
+     * Attribute of an Task
      */
     public enum Attribute {
         STRENGTH, CONSTITUTION, INTELLIGENCE, PERCEPTION
