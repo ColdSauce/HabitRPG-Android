@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * Created by Stefan on 5/26/2015.
  */
-public abstract class Task {
+public abstract class Task implements Element {
     //What the Task is called.
     private String text;
 
@@ -35,14 +35,31 @@ public abstract class Task {
     //Each element has its own id.
     private String id;
 
+
     /**
-     * Sends a post request to the Habit RPG server.
-     * Different for each Habit RPG "Element" so implementation is up to the sub classes of this
-     * class.
+     *
+     * @param text
+     * @param challenge
+     * @param attribute
+     * @param priority
+     * @param value
+     * @param tags        describes what a task does.
+     * @param notes
+     * @param dateCreated
+     * @param id
      */
-    public abstract void createElement();
-
-
+    public Task(String text, Challenge challenge, String attribute, int priority, int value,
+                List<Tag> tags, String notes, Date dateCreated, String id) {
+        this.text = text;
+        this.challenge = challenge;
+        this.attribute = attribute;
+        this.priority = priority;
+        this.value = value;
+        this.tags = tags;
+        this.notes = notes;
+        this.dateCreated = dateCreated;
+        this.id = id;
+    }
 
     /**
      * @return name of the element (HrElement.text)
@@ -53,4 +70,48 @@ public abstract class Task {
                 "text='" + text + '\'' +
                 '}';
     }
+
+
+    //Start getter methods. Oh god java why do you have to do this..
+
+
+    public String getText() {
+        return text;
+    }
+
+    public Challenge getChallenge() {
+        return challenge;
+    }
+
+    public String getAttribute() {
+        return attribute;
+    }
+
+    public int getPriority() {
+        return priority;
+    }
+
+    public int getValue() {
+        return value;
+    }
+
+    public List<Tag> getTags() {
+        return tags;
+    }
+
+    public String getNotes() {
+        return notes;
+    }
+
+    public Date getDateCreated() {
+        return dateCreated;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    //end getter methods.
+
+
 }
